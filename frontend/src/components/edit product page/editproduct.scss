@@ -1,0 +1,78 @@
+.edit-product-nav-container {
+  background-image: linear-gradient(
+    to right,
+    purple,
+    rgb(134, 63, 134),
+    rgb(137, 90, 137)
+  );
+  height: 60px;
+  padding: 15px 30px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.main-edit-product-contaier {
+  margin: 10px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-edit-product-contaier .inputs-main-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(199, 106, 199);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(147, 88, 147);
+  padding: 20px;
+}
+
+.main-edit-product-contaier .inputs-main-container .input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.main-edit-product-contaier .inputs-main-container .input-container label {
+  font-family: cursive;
+  margin-bottom: 5px;
+}
+.main-edit-product-contaier .inputs-main-container .input-container input {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  border: solid 1px black;
+  text-align: center;
+}
+
+.shekel-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.main-edit-product-contaier
+  .inputs-main-container
+  .button-container
+  .submitbtn {
+  width: 120px;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: purple;
+  cursor: pointer;
+  border-radius: 10px;
+  opacity: 0.6;
+  transition: 0.3s;
+  margin-top: 10px;
+  position: relative;
+  left: 35%;
+}
+
+.main-edit-product-contaier
+  .inputs-main-container
+  .button-container
+  .submitbtn:hover {
+  opacity: 1;
+}

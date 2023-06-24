@@ -1,0 +1,25 @@
+.middel-container {
+  // height: 489px;
+  
+  background-color: black;
+}
+
+.middel-container .carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .carousel-item {
+  position: relative;
+  left: 18%;
+}
+
+.carousel .carousel-item h1 {
+  color: red;
+  margin-left: 300px;
+}
+
+.carousel .carousel-item img {
+  height: 400px;
+  width: 800px;
+}

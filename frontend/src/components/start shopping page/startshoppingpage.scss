@@ -1,0 +1,17 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container .header-container {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 2px solid black;
+}
+
+.main-container .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

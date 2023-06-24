@@ -1,0 +1,21 @@
+.carorder {
+  margin-top: 200px;
+  position: relative;
+  animation-name: Car;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+}
+
+.carorder .img {
+  height: 300px;
+  width: 300px;
+}
+
+@keyframes Car {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}

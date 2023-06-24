@@ -1,0 +1,43 @@
+.header-main-contanier {
+  background-image: linear-gradient(
+    to left,
+    rgb(222, 136, 222),
+    rgb(134, 63, 134),
+    rgb(137, 90, 137)
+  );
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.header-main-contanier .button-contanier {
+  display: flex;
+  justify-content: right;
+  text-align: center;
+  flex-direction: row;
+}
+
+//--------------------------------main page button style--------------------------------
+.header-main-contanier .main-button {
+  width: 100px;
+  height: 45px;
+  color: #fff;
+  background: rgb(110, 10, 110);
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 10px;
+  opacity: 0.6;
+  border: none;
+}
+
+.header-main-contanier .main-button:hover {
+  opacity: 1;
+  background-color: rgb(162, 9, 162);
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+}
+
+//----------------------------------------------------------------------------------------------

@@ -1,0 +1,111 @@
+.start-shopping-header {
+  background-image: linear-gradient(
+    to left,
+    rgb(222, 136, 222),
+    rgb(134, 63, 134),
+    rgb(137, 90, 137)
+  );
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+}
+
+.start-shopping-header .name-container {
+  font-size: large;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+.cart-icon-container label{
+  font-weight: bold;
+  font-size: large;
+  color: #74e946;
+}
+
+.start-shopping-header .img-container img {
+  width: 60px;
+  height: 60px;
+}
+
+//--------------------------------main page button style--------------------------------
+.start-shopping-header .main-button {
+  width: 120px;
+  height: 45px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: purple;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+.start-shopping-header .main-button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(15px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 10s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.start-shopping-header .main-button:active {
+  color: #000;
+}
+
+.start-shopping-header .main-button:active:after {
+  background: transparent;
+}
+
+.start-shopping-header .main-button:hover:before {
+  opacity: 1;
+}
+
+.start-shopping-header .main-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: purple;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+//----------------------------------------------------------------------------------------------
