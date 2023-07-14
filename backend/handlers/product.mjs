@@ -123,7 +123,7 @@ function UpdateProduct(req, res) {
           res.json({
             message: "Data Update Succsess ",
             success: true,
-            result: productdata,
+            data: result,
           });
         } else {
           console.log("Data Update Failed");

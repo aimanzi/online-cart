@@ -1,7 +1,7 @@
 .loader {
   width: 120px;
   height: 120px;
-  border: 10px dotted #f3f3f3;
+  border: 10px solid #f3f3f3;
   border-radius: 50%;
   border-top: 10px dotted #3498db;
   border-left: 10px dotted #3fde30;
@@ -11,7 +11,7 @@
   // animation-duration: 1s;
   // animation-timing-function:linear ;
   // animation-iteration-count: infinite;
-  animation: cycle-loder 2s ease-in-out infinite;
+  animation: cycle-loder 1s ease-in-out infinite;
   position: fixed;
   top: 35%;
   left: 45%;
@@ -30,17 +30,14 @@
 .loader1 {
   width: 120px;
   height: 120px;
-  border: 10px dotted #f3f3f3;
+  border: 15px solid rgb(226, 219, 219);
   border-radius: 50%;
-  border-top: 13px dotted #3498db;
-  border-left: 10px dotted #3fde30;
-  border-right: 16px dotted #30c7de;
-  border-bottom: 7px dotted rgb(220, 59, 59);
+  border-top: 15px solid rgb(33, 47, 173);
   // animation-name: cycle-loder;
   // animation-duration: 1s;
   // animation-timing-function:linear ;
   // animation-iteration-count: infinite;
-  animation: doted_cycle-loder 2s ease-in-out infinite;
+  animation: doted_cycle-loder 1s ease-in-out infinite;
   position: fixed;
   top: 35%;
   left: 45%;

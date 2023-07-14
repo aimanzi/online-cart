@@ -22,6 +22,7 @@ const SignUp: React.FC = () => {
   const [passwordmsg, setPasswordMsg] = useState<string>("");
   const [confirmpasswordmsg, setPasswordConfirm] = useState<string>("");
   const [generalmsg, setGneralMsg] = useState<string>("");
+  const [resmsg, setResMsg] = useState("");
   const [isUpdating, setUpdating] = useState(false);
 
   const removeClassname = (id: string, classname: string) => {
@@ -180,8 +181,7 @@ const SignUp: React.FC = () => {
         .then((data) => {
           if (data) {
             setUpdating(false);
-            setGneralMsg(data.message);
-            console.log(data.message);
+            setResMsg(data.message);
           }
         })
         .catch((err) => console.log(err));
@@ -190,32 +190,34 @@ const SignUp: React.FC = () => {
   };
 
   useEffect(() => {
-    // var element = document.getElementById("1");
-    // element?.addEventListener("mouseover", () => {
-    //   removeClassname("gnrmsg", "remove");
-    //   setGneralMsg("Condition 1");
-    // });
-    // element?.addEventListener("mouseleave", () => {
-    //   addClassname("gnrmsg", "remove");
-    // });
-    // var element1 = document.getElementById("2");
-    // element1?.addEventListener("mouseover", () => {
-    //   removeClassname("gnrmsg", "remove");
-    //   setGneralMsg("Condition 2");
-    // });
-    // element1?.addEventListener("mouseleave", () => {
-    //   addClassname("gnrmsg", "remove");
-    // });
-    // var element2 = document.getElementById("3");
-    // element2?.addEventListener("mouseover", () => {
-    //   removeClassname("gnrmsg", "remove");
-    //   setGneralMsg("Condition 3");
-    // });
-    // element2?.addEventListener("mouseleave", () => {
-    //   addClassname("gnrmsg", "remove");
-    // });
-    // var setpElement = document.querySelector(".step1");
-    // setpElement?.addEventListener("mouseover", () => {});
+    var element = document.getElementById("1");
+    element?.addEventListener("mouseover", () => {
+      removeClassname("gnrmsg", "remove");
+      setGneralMsg("Use Only Letters For Fist And Last Name");
+    });
+    element?.addEventListener("mouseleave", () => {
+      addClassname("gnrmsg", "remove");
+    });
+
+    var element1 = document.getElementById("2");
+    element1?.addEventListener("mouseover", () => {
+      removeClassname("gnrmsg", "remove");
+      setGneralMsg(
+        "The Password Must Contain At Lest 8 Character One ,UperCase Lettet ,Number And Special Character"
+      );
+    });
+    element1?.addEventListener("mouseleave", () => {
+      addClassname("gnrmsg", "remove");
+    });
+
+    var element2 = document.getElementById("3");
+    element2?.addEventListener("mouseover", () => {
+      removeClassname("gnrmsg", "remove");
+      setGneralMsg("");
+    });
+    element2?.addEventListener("mouseleave", () => {
+      addClassname("gnrmsg", "remove");
+    });
   });
 
   //-----------------------------------------------------------------------------------------------//
@@ -241,171 +243,175 @@ const SignUp: React.FC = () => {
         </div>
       </nav>
 
-      <form onSubmit={UserSignUp}>
-        <div className="signup-main-container">
-          <div className="generalmsg-container" id="gnrmsg">
-            <h6>{generalmsg}</h6>
+      <div className="signup-main-container">
+        <div className="generalmsg-container" id="gnrmsg">
+          <h6>{generalmsg}</h6>
+        </div>
+        <div className="signup-container" id="step1">
+          <div className="signup-input-container" id="1">
+            <label>First Name : </label>
+            <input
+              id="fname"
+              type="text"
+              value={firstname}
+              placeholder=" first name"
+              spellCheck="true"
+              onChange={(fname) => setFirstName(fname.target.value)}
+              required
+            />
           </div>
-          <div className="signup-container" id="step1">
-            <div className="signup-input-container" id="1">
-              <label>First Name : </label>
-              <input
-                id="fname"
-                type="text"
-                value={firstname}
-                placeholder=" first name"
-                spellCheck="true"
-                onChange={(fname) => setFirstName(fname.target.value)}
-                required
-              />
-            </div>
-            <div className="signup-input-container">
-              <label>Last Name : </label>
-              <input
-                id="lname"
-                type="text"
-                value={lastname}
-                placeholder="last name"
-                onChange={(lname) => setLastName(lname.target.value)}
-                required
-              />
-            </div>
-            <div className="signup-input-container">
-              <label>Id Number : </label>
-              <input
-                id="idnum"
-                type="number"
-                value={id}
-                placeholder="id number"
-                onChange={(id) => setId(id.target.value)}
-                required
-              />
-            </div>
-            {firstname && lastname && id ? (
-              <div>
-                <button
-                  type="button"
-                  className="signup-button"
-                  id="nextbutton"
-                  onClick={() => {
-                    setp1Validation();
-                    addClassname("nextbutton", "remove");
-                  }}
-                >
-                  Next
-                </button>
-              </div>
-            ) : (
-              ""
-            )}
-            <div className="errormsg" id="setp1-err-msg">
-              <h6>{fnamemsg}</h6>
-              <h6>{lnamemsg}</h6>
-              <h6>{idmsg}</h6>
-            </div>
+          <div className="signup-input-container">
+            <label>Last Name : </label>
+            <input
+              id="lname"
+              type="text"
+              value={lastname}
+              placeholder="last name"
+              onChange={(lname) => setLastName(lname.target.value)}
+              required
+            />
           </div>
-
-          <div className="signup-container nextstep" id="step2">
-            <div className="signup-input-container" id="2">
-              <label>Email : </label>
-              <input
-                type="email"
-                value={mail}
-                placeholder="mail address"
-                onChange={(mail) => setMail(mail.target.value)}
-                required
-              />
-            </div>
-            <div className="signup-input-container">
-              <label>Password : </label>
-              <input
-                type="password"
-                value={password}
-                placeholder="password"
-                onChange={(password) => setPassword(password.target.value)}
-                required
-              />
-            </div>
-            <div className="signup-input-container">
-              <label>Confirm Password : </label>
-              <input
-                type="password"
-                value={confirmpassword}
-                placeholder="password"
-                onChange={(password) =>
-                  setconFirmPassword(password.target.value)
-                }
-                required
-              />
-            </div>
-            {mail && password && confirmpassword ? (
-              <div>
-                <button
-                  type="button"
-                  id="nextbutton1"
-                  className="signup-button"
-                  onClick={() => {
-                    step2Valeidation();
-                    addClassname("nextbutton1", "remove");
-                  }}
-                >
-                  Next
-                </button>
-              </div>
-            ) : (
-              ""
-            )}
-            <div className="errormsg " id="setp2-err-msg">
-              <h6>{mailmsg}</h6>
-              <h6>{passwordmsg}</h6>
-              <h6>{confirmpasswordmsg}</h6>
-            </div>
+          <div className="signup-input-container">
+            <label>Id Number : </label>
+            <input
+              id="idnum"
+              type="number"
+              value={id}
+              placeholder="id number"
+              onChange={(id) => setId(id.target.value)}
+              required
+            />
           </div>
-
-          <div className="signup-container nextstep" id="step3">
-            <div className="signup-input-container" id="3">
-              <label>City : </label>
-              <input
-                type="text"
-                value={city}
-                placeholder="city name"
-                onChange={(cname) => setCity(cname.target.value)}
-                required
-              />
+          {firstname && lastname && id ? (
+            <div>
+              <button
+                type="button"
+                className="signup-button"
+                id="nextbutton"
+                onClick={() => {
+                  setp1Validation();
+                  addClassname("nextbutton", "remove");
+                }}
+              >
+                Next
+              </button>
             </div>
-            <div className="signup-input-container">
-              <label>Address : </label>
-              <input
-                type="text"
-                value={address}
-                placeholder="home address"
-                onChange={(haddress) => setAddress(haddress.target.value)}
-                required
-              />
-            </div>
-            <div className="signup-input-container">
-              <label>Phone Number : </label>
-              <input
-                type="text"
-                value={phonenumber}
-                placeholder="id number"
-                onChange={(id) => setPhoneNumber(id.target.value)}
-                required
-              />
-            </div>
-            {city && address && phonenumber ? (
-              <div className="signup-button-container">
-                <button type="submit" className="signup-button">
-                  Sbumit
-                </button>
-              </div>
-            ) : (
-              ""
-            )}
+          ) : (
+            ""
+          )}
+          <div className="errormsg" id="setp1-err-msg">
+            <h6>{fnamemsg}</h6>
+            <h6>{lnamemsg}</h6>
+            <h6>{idmsg}</h6>
           </div>
         </div>
-        <div>{generalmsg}</div>
-      </form>
+
+        <div className="signup-container nextstep" id="step2">
+          <div className="signup-input-container" id="2">
+            <label>Email : </label>
+            <input
+              type="email"
+              value={mail}
+              placeholder="mail address"
+              onChange={(mail) => setMail(mail.target.value)}
+              required
+            />
+          </div>
+          <div className="signup-input-container">
+            <label>Password : </label>
+            <input
+              type="password"
+              value={password}
+              placeholder="password"
+              onChange={(password) => setPassword(password.target.value)}
+              required
+            />
+          </div>
+          <div className="signup-input-container">
+            <label>Confirm Password : </label>
+            <input
+              type="password"
+              value={confirmpassword}
+              placeholder="password"
+              onChange={(password) => setconFirmPassword(password.target.value)}
+              required
+            />
+          </div>
+          {mail && password && confirmpassword ? (
+            <div>
+              <button
+                type="button"
+                id="nextbutton1"
+                className="signup-button"
+                onClick={() => {
+                  step2Valeidation();
+                  addClassname("nextbutton1", "remove");
+                }}
+              >
+                Next
+              </button>
+            </div>
+          ) : (
+            ""
+          )}
+          <div className="errormsg " id="setp2-err-msg">
+            <h6>{mailmsg}</h6>
+            <h6>{passwordmsg}</h6>
+            <h6>{confirmpasswordmsg}</h6>
+          </div>
+        </div>
+
+        <div className="signup-container nextstep" id="step3">
+          <div className="signup-input-container" id="3">
+            <label>City : </label>
+            <input
+              type="text"
+              value={city}
+              placeholder="city name"
+              onChange={(cname) => setCity(cname.target.value)}
+              required
+            />
+          </div>
+          <div className="signup-input-container">
+            <label>Address : </label>
+            <input
+              type="text"
+              value={address}
+              placeholder="home address"
+              onChange={(haddress) => setAddress(haddress.target.value)}
+              required
+            />
+          </div>
+          <div className="signup-input-container">
+            <label>Phone Number : </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{3}-[0-9]{7}"
+              onChange={(pnumber) => setPhoneNumber(pnumber.target.value)}
+              placeholder="123-4567890"
+              required
+            ></input>
+          </div>
+          {city && address && phonenumber ? (
+            <div className="signup-button-container">
+              <button
+                type="submit"
+                className="signup-button"
+                onClick={UserSignUp}
+              >
+                Sbumit
+              </button>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
+        <div className="resmsg">
+          <h6>{resmsg}</h6>
+        </div>
+      </div>
       <Footer />
     </div>
   );

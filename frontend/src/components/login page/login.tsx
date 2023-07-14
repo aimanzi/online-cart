@@ -76,7 +76,6 @@ const Login: React.FC = () => {
         .then((data) => {
           setIsLoader(false);
           if (data) {
-            console.log(data);
             if (data.loginstatus === true) {
               dispatch(SET(data.userdata));
             } else {
@@ -94,13 +93,24 @@ const Login: React.FC = () => {
     Fetching();
   };
 
+  const DisConnect = () => {
+    fetch("http://localhost:5000/disconnect", {
+      method: "POST",
+      headers: {
+        "Access-Control": "Allow-Origin",
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+  };
+
   return (
     <div className="main-login-div">
       <div>{isLoading ? <Loader1 /> : ""}</div>
       <nav className="login-nav-container">
         <div className="link-container">
           <Link to={"/"}>
-            <button type="button" className="btn">
+            <button type="button" className="btn" onClick={DisConnect}>
               Home Page
             </button>
           </Link>

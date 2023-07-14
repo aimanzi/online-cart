@@ -1,5 +1,4 @@
-import signupdata from "../model/signup.mjs";
-import mongoose, { model } from "mongoose";
+import mongoose from "mongoose";
 
 //connecting using mongoose
 
@@ -27,7 +26,6 @@ class ConnectingToMDB {
 
   //disconnect from DB:
   static async disconnect() {
-    setTimeout(() => {
       mongoose
         .disconnect()
         .then(() => {
@@ -36,7 +34,6 @@ class ConnectingToMDB {
         .catch((err) => {
           console.error("Error disconnecting from database:", err);
         });
-    }, 1000);
   }
 }
 

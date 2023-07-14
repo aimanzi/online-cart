@@ -51,21 +51,21 @@
   width: 30px;
 }
 
+.button-container{
+  margin-top: 20px;
+}
+
 .main-edit-product-contaier
   .inputs-main-container
   .button-container
   .submitbtn {
   width: 120px;
   padding: 10px 0;
-  border: none;
-  outline: none;
   color: #fff;
   background: purple;
   cursor: pointer;
   border-radius: 10px;
   opacity: 0.6;
-  transition: 0.3s;
-  margin-top: 10px;
   position: relative;
   left: 35%;
 }
@@ -75,4 +75,9 @@
   .button-container
   .submitbtn:hover {
   opacity: 1;
+}
+
+
+.msg-container{
+  margin-top: 30px;
 }

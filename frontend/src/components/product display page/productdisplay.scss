@@ -17,25 +17,6 @@ main.product.container {
   align-items: center;
 }
 
-.dropdown-container {
-  display: flex;
-}
-
-.dropdown-container .dropdown {
-  background-color: rgb(224, 104, 224);
-  margin-left: 5px;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-weight: 700;
-}
-
-.dropdown-container .reset-button {
-  background-color: rgb(224, 104, 224);
-  border: none;
-  margin-left: 5px;
-  color: black;
-  font-weight: 700;
-}
 .search-container .search-input {
   padding: 10px 20px;
   margin-right: 5px;
@@ -53,7 +34,7 @@ main.product.container {
 
 .card-container {
   border-radius: 20px;
-  opacity: 0.6;
+  // opacity: 0.6;
 }
 
 .card-container:hover {
@@ -123,4 +104,24 @@ main.product.container {
 
 .hide {
   display: none;
+}
+
+.dropdown-container {
+  display: flex;
+}
+
+.dropdown-container .dropdown {
+  background-color: rgb(224, 104, 224);
+  margin-left: 5px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 700;
+}
+
+.dropdown-container .reset-button {
+  background-color: rgb(224, 104, 224);
+  border: none;
+  margin-left: 5px;
+  color: black;
+  font-weight: 700;
 }

@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavDropdown } from "react-bootstrap";
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
 import { addproduct } from "../redux/reducer/product.mjs";
-import Loader1 from "../loader/loader1";
+import Loader from "../loader/loader";
 
 const AddProduct: React.FC = () => {
   const [productname, setProductName] = useState<string>("");
@@ -81,7 +81,7 @@ const AddProduct: React.FC = () => {
 
   return (
     <div>
-      {isLoder ? <Loader1 /> : ""}
+      {isLoder ? <Loader /> : ""}
       <NavDropdown className="edit-product-nav-container" title={"Menu"}>
         <DropdownItem>
           <Link to={"/startshopping"} style={{ textDecoration: "none" }}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -47,6 +47,7 @@ const EditProduct: React.FC = () => {
       await fetch("http://localhost:5000/updateproduct", PostTodata)
         .then((response) => response.json())
         .then((data) => {
+          console.log(data);
           setMsg(data.message);
           setIsLoader(false);
         })
@@ -155,9 +156,9 @@ const EditProduct: React.FC = () => {
               Send Changes
             </button>
           </div>
-          {/* <div>
+          <div className="msg-container">
             <label>{msg}</label>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
