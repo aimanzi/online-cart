@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://aimanzi.github.io/online-cart",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./mainserver/mainserver.mjs"
+    "start": "nodemon ./mainserver/mainserver.mjs",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +23,8 @@
     "mongodb": "4.1",
     "mongoose": "^7.0.4",
     "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
