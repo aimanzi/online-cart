@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/online-cart/static/css/main.bd73b44b.css",
+    "main.js": "/online-cart/static/js/main.5ae5e077.js",
+    "static/js/787.2241fb26.chunk.js": "/online-cart/static/js/787.2241fb26.chunk.js",
+    "static/media/הגיס.jpg": "/online-cart/static/media/הגיס.a73f94b29c88e0a293d7.jpg",
+    "static/media/סימילק.jpg": "/online-cart/static/media/סימילק.747f21581c9dac0246e0.jpg",
+    "static/media/bootstrap-icons.woff?": "/online-cart/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/online-cart/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
+    "static/media/connect-with-your-friends-via-secure-messenger.jpg": "/online-cart/static/media/connect-with-your-friends-via-secure-messenger.be7c28a2ff7f24d02a98.jpg",
+    "static/media/online-shopping-bags-white-text-shop-white-background-30647651.jpg": "/online-cart/static/media/online-shopping-bags-white-text-shop-white-background-30647651.26e9556dd755ea526507.jpg",
+    "static/media/R.png": "/online-cart/static/media/R.624dc248205899b9dbc1.png",
+    "static/media/1409839.png": "/online-cart/static/media/1409839.6731a46d59becca13a34.png",
+    "static/media/סלמון.jpg": "/online-cart/static/media/סלמון.fdc13fc82c0249cb61b5.jpg",
+    "index.html": "/online-cart/index.html",
+    "main.bd73b44b.css.map": "/online-cart/static/css/main.bd73b44b.css.map",
+    "main.5ae5e077.js.map": "/online-cart/static/js/main.5ae5e077.js.map",
+    "787.2241fb26.chunk.js.map": "/online-cart/static/js/787.2241fb26.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd73b44b.css",
+    "static/js/main.5ae5e077.js"
+  ]
+}
