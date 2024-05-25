@@ -25,6 +25,21 @@ const SignUp: React.FC = () => {
   const [resmsg, setResMsg] = useState("");
   const [isUpdating, setUpdating] = useState(false);
 
+  function clearInputs() {
+    setTimeout(() => {
+      setFirstName("");
+      setLastName("");
+      setId("");
+      setMail("");
+      setPassword("");
+      setconFirmPassword("");
+      setCity("");
+      setAddress("");
+      setPhoneNumber("");
+      setResMsg("");
+    }, 2000);
+  }
+
   const removeClassname = (id: string, classname: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -182,6 +197,7 @@ const SignUp: React.FC = () => {
           if (data) {
             setUpdating(false);
             setResMsg(data.message);
+            clearInputs();
           }
         })
         .catch((err) => console.log(err));

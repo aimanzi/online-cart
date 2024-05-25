@@ -110,7 +110,7 @@ const ProductDisplay: React.FC = () => {
   };
 
   const Editproduct = (data: ProductInfoTyps) => {
-    dispatch(editproduct( data ));
+    dispatch(editproduct(data));
     navigate("/editproduct");
   };
 

@@ -76,7 +76,7 @@ const CartSummary: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <label>Total Price :</label>
+                  <label>Price :</label>
                   {item.productPrice * item.quantity}
                 </div>
               </div>

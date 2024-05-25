@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./addproduct.scss";
 import Footer from "../footer/footer";
 import icon from "../assets/icons/1409839.png";
-import { useDispatch, useSelector } from "react-redux";
 import { NavDropdown } from "react-bootstrap";
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
-import { addproduct } from "../redux/reducer/product.mjs";
 import Loader from "../loader/loader";
 
 const AddProduct: React.FC = () => {
