@@ -31,4 +31,6 @@ const ProductSchema = new Schema(
   { timestamps: true }
 );
 
+// date: { type: Date, default: Date.now },
+
 export default mongoose.model("ProductInfo", ProductSchema);

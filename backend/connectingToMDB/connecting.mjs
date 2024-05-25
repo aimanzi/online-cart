@@ -8,12 +8,9 @@ class ConnectingToMDB {
     const options = {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      keepAlive: true,
-      socketTimeoutMS: 10000,
     };
-
     const url =
-      "mongodb+srv://aimanzi:12345@cluster1.fyxgckl.mongodb.net/onlineshop";
+      "mongodb+srv://aimanzi:12345@cluster0.uwqonav.mongodb.net/cartApp";
     await mongoose
       .connect(url, options)
       .then(() => {
@@ -26,14 +23,14 @@ class ConnectingToMDB {
 
   //disconnect from DB:
   static async disconnect() {
-      mongoose
-        .disconnect()
-        .then(() => {
-          console.log("DataBase staus:", "disconnecting from MongoDB Succsess");
-        })
-        .catch((err) => {
-          console.error("Error disconnecting from database:", err);
-        });
+    mongoose
+      .disconnect()
+      .then(() => {
+        console.log("DataBase staus:", "disconnecting from MongoDB Succsess");
+      })
+      .catch((err) => {
+        console.error("Error disconnecting from database:", err);
+      });
   }
 }
 

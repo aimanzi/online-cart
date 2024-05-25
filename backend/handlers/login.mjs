@@ -7,7 +7,7 @@ function LogIn(req, res) {
   const userData = signUpUsersSchema;
   console.log("Connecting To Login Server");
   const userLoginData = req.body;
-   let mail = userLoginData.mail;
+  let mail = userLoginData.mail;
   let password = userLoginData.password;
   password = crypto
     .createHash("sha256")
@@ -31,7 +31,7 @@ function LogIn(req, res) {
                 );
                 res.json({
                   message: "user name and password is correct",
-                  loginstatus:true,
+                  loginstatus: true,
                   userdata: result,
                 });
               } else {
@@ -58,7 +58,5 @@ function LogIn(req, res) {
       });
   }
 }
-
-  
 
 export default { LogIn };

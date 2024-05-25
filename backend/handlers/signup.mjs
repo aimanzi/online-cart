@@ -72,7 +72,7 @@ function userSignUp(req, res) {
                 })
                 .catch((err) => {
                   console.log("Error Inserting User Data", err);
-                  res.jso({
+                  res.json({
                     message: "error Inserting User Data",
                     succsess: false,
                     userdata: result,
